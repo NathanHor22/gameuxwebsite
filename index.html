@@ -6,10 +6,13 @@
   <title>Game UX Summit 2026 | Kuala Lumpur</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/hero-bg/hero-desktop.png" type="image/png" media="(min-width: 1101px)">
+  <link rel="preload" as="image" href="images/hero-bg/hero-tablet.png" type="image/png" media="(min-width: 768px) and (max-width: 1100px)">
+  <link rel="preload" as="image" href="images/hero-bg/hero-mobile.png" type="image/png" media="(max-width: 767px)">
   <link rel="preload" as="image" href="images/hero-logo-desktop.png" media="(min-width: 768px)">
   <link rel="preload" as="image" href="images/hero-logo-mobile.svg" media="(max-width: 767px)">
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..400&family=JetBrains+Mono:wght@300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=hotel-more-1">
+  <link rel="stylesheet" href="css/style.css?v=css-carousel-nav-1">
 </head>
 <body>
   <header class="topbar nav-glass">
@@ -20,7 +23,7 @@
     </button>
 
     <nav class="main-nav label-1" aria-label="Main navigation" data-nav>
-      <a href="#home" aria-current="page">Home</a>
+      <a href="#home">Home</a>
       <a href="#meet-speakers">Speakers</a>
       <a href="#schedule">Schedule</a>
       <a href="#tickets">Ticket Pricing</a>
@@ -42,7 +45,7 @@
 
   <main id="home">
     <section class="hero" aria-label="Game UX Summit">
-      <canvas class="hero-bg" width="1440" height="720" data-mesh-gradient aria-hidden="true"></canvas>
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-mark-wrap" aria-hidden="true">
         <img class="hero-mark" src="images/hero_logo.png" alt="">
       </div>
@@ -180,7 +183,7 @@
         <h2 class="section-heading" id="meet-speakers-title">Meet the<br>Speakers</h2>
 
         <div class="speakers-callout">
-          <canvas class="speakers-callout-bg" width="1280" height="248" data-speaker-mesh-gradient aria-hidden="true"></canvas>
+          <div class="speakers-callout-bg" aria-hidden="true"></div>
           <a class="speaker-button label-2" href="https://forms.gle/8RD97uaeE8cGi6wx5" target="_blank" rel="noopener">
             <span>Call for Speakers</span>
             <img class="cta-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
@@ -303,7 +306,7 @@
                       <source srcset="images/hotels/webp/kimpton-naluria.webp" type="image/webp">
                       <img class="hotel-image" src="images/hotels/pngs/kimpton-naluria.png" alt="Kimpton Naluria" loading="lazy" decoding="async">
                     </picture>
-                    <h4>Kimpton Naluria</h4>
+                    <h4>Kimpton<br class="mobile-title-break"> Naluria</h4>
                     <p class="hotel-distance">11 km</p>
                     <p class="hotel-price">$$$</p>
                     <p class="hotel-description">Luxury boutique hotel in TRX district, offering direct metro access, rooftop views, and upscale dining nearby.</p>
@@ -317,7 +320,7 @@
                       <source srcset="images/hotels/webp/traders-hotel.webp" type="image/webp">
                       <img class="hotel-image" src="images/hotels/pngs/traders-hotel.png" alt="Traders Hotel" loading="lazy" decoding="async">
                     </picture>
-                    <h4>Traders Hotel</h4>
+                    <h4>Traders<br class="mobile-title-break"> Hotel</h4>
                     <p class="hotel-distance">13 km</p>
                     <p class="hotel-price">$$&ndash;$$$</p>
                     <p class="hotel-description">Stylish, central KLCC hotel offering iconic Twin Tower views, rooftop bar, and superb service.</p>
@@ -389,7 +392,7 @@
                       <source srcset="images/hotels/webp/kimpton-naluria.webp" type="image/webp">
                       <img class="hotel-image" src="images/hotels/pngs/kimpton-naluria.png" alt="" loading="lazy" decoding="async">
                     </picture>
-                    <h4>Kimpton Naluria</h4>
+                    <h4>Kimpton<br class="mobile-title-break"> Naluria</h4>
                     <p class="hotel-distance">11 km</p>
                     <p class="hotel-price">$$$</p>
                     <p class="hotel-description">Luxury boutique hotel in TRX district, offering direct metro access, rooftop views, and upscale dining nearby.</p>
@@ -403,7 +406,7 @@
                       <source srcset="images/hotels/webp/traders-hotel.webp" type="image/webp">
                       <img class="hotel-image" src="images/hotels/pngs/traders-hotel.png" alt="" loading="lazy" decoding="async">
                     </picture>
-                    <h4>Traders Hotel</h4>
+                    <h4>Traders<br class="mobile-title-break"> Hotel</h4>
                     <p class="hotel-distance">13 km</p>
                     <p class="hotel-price">$$&ndash;$$$</p>
                     <p class="hotel-description">Stylish, central KLCC hotel offering iconic Twin Tower views, rooftop bar, and superb service.</p>
@@ -489,6 +492,6 @@
     </section>
   </main>
 
-  <script src="js/main.js?v=mesh-always-1"></script>
+  <script src="js/main.js?v=js-carousel-nav-1" defer></script>
 </body>
 </html>
