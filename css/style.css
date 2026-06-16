@@ -444,6 +444,40 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   object-fit: contain;
 }
 
+.hero-credits {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: clamp(28px, 3vw, 52px);
+  max-width: calc(100vw - 80px);
+}
+
+.hero-sponsor {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.hero-sponsor-label {
+  margin: 4px 0 0;
+  font-family: var(--type-label-1-font-family);
+  font-size: var(--type-label-1-font-size);
+  line-height: var(--type-label-1-line-height);
+  letter-spacing: var(--type-label-1-letter-spacing);
+  color: var(--color-white-80);
+}
+
+.hero-sponsor-figure {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.hero-sponsor-logo {
+  width: 84px;
+  height: auto;
+}
+
 .hero-logo-mobile,
 .hero-hosts-mobile {
   display: none;
@@ -2153,6 +2187,16 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     width: 202px;
     max-width: calc(100vw - 32px);
     aspect-ratio: 393 / 160;
+  }
+
+  .hero-credits {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .hero-sponsor {
+    align-self: flex-start;
   }
 
   .hero-logo-desktop,
