@@ -456,6 +456,7 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  margin-left: 20px;
 }
 
 .hero-sponsor-label {
@@ -2196,7 +2197,11 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   }
 
   .hero-sponsor {
-    align-self: flex-start;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 5px;
   }
 
   .hero-logo-desktop,
