@@ -1779,11 +1779,12 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   }
 
   .subtitle-desktop {
-    display: none;
+    display: block;
+    margin-top: 5px;
   }
 
   .subtitle-compact {
-    display: inline;
+    display: block;
   }
 
   .price {
