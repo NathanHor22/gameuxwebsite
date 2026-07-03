@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="images/hero-title-desktop.svg?v=20260624-1" type="image/svg+xml" media="(min-width: 768px)">
   <link rel="preload" as="image" href="images/hero-title-mobile.svg?v=20260624-1" type="image/svg+xml" media="(max-width: 767px)">
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..400&family=JetBrains+Mono:wght@300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=css-mobile-title-june24-1">
+  <link rel="stylesheet" href="css/style.css?v=accommodation-title-nowrap-july03-3">
 </head>
 <body>
   <header class="topbar nav-glass">
@@ -98,21 +98,6 @@
       </div>
 
       <div class="page-wrap ticket-grid" id="tickets">
-        <article class="price-card price-card-orange">
-          <span class="mark-bg" aria-hidden="true"></span>
-          <div class="price-content">
-            <h2>Early Bird Summit</h2>
-            <p class="card-subtitle label-2"><span class="subtitle-desktop">ENDS 26.06.2026</span><span class="subtitle-compact">ENDS 26.06.2026</span></p>
-            <p class="price">$100</p>
-            <ul>
-              <li>Both days of<br>the summit</li>
-              <li>Talks &amp; Panel<br>Discussions</li>
-              <li>Breakfast &amp; lunch</li>
-              <li>Networking mixer</li>
-            </ul>
-          </div>
-        </article>
-
         <article class="price-card price-card-dark">
           <span class="mark-bg" aria-hidden="true"></span>
           <div class="price-content">
@@ -138,6 +123,24 @@
               <li>Both days of<br>the summit</li>
               <li>Talks &amp; Panel<br>Discussions</li>
               <li>Breakfast &amp; lunch</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="price-card price-card-orange price-card-ended">
+          <span class="mark-bg" aria-hidden="true"></span>
+          <div class="price-content">
+            <h2>Early Bird Summit</h2>
+            <p class="ended-pill" aria-label="Ended">
+              <span class="ended-pill-dot" aria-hidden="true"></span>
+              <span>ENDED</span>
+            </p>
+            <p class="price">$100</p>
+            <ul>
+              <li>Both days of<br>the summit</li>
+              <li>Talks &amp; Panel<br>Discussions</li>
+              <li>Breakfast &amp; lunch</li>
+              <li>Networking mixer</li>
             </ul>
           </div>
         </article>
@@ -261,7 +264,7 @@
                 </div>
               </article>
 
-              <article class="speaker-card" hidden>
+              <article class="speaker-card">
                 <div class="speaker-media">
                   <img src="images/speakers/laura-elek-2026.png" alt="Laura Elek">
                 </div>
@@ -275,21 +278,21 @@
                 </div>
               </article>
 
-              <article class="speaker-card" hidden>
+              <article class="speaker-card">
                 <div class="speaker-media">
-                  <img src="images/speakers/jozef-kulik-2026.png" alt="Józef Kulik">
+                  <img src="images/speakers/kate-fomina-2026.png" alt="Kate Fomina">
                 </div>
                 <div class="speaker-info">
                   <div>
-                    <h3>Józef Kulik</h3>
-                    <p>Senior Research and Accessibility Lead</p>
-                    <p class="speaker-company">PlaytestCloud</p>
+                    <h3>Kate Fomina</h3>
+                    <p>Senior UX/UI Designer</p>
+                    <p class="speaker-company">Gravity Well</p>
                   </div>
                   <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
                 </div>
               </article>
 
-              <article class="speaker-card" hidden>
+              <article class="speaker-card">
                 <div class="speaker-media">
                   <img src="images/speakers/dr-ng-yiing-yng-2026.png" alt="Dr Ng Yiing Y'ng">
                 </div>
@@ -409,6 +412,20 @@
 
                   <article class="hotel-card">
                     <picture>
+                      <source media="(max-width: 767px)" srcset="images/hotels/webp/komune-living-mobile.webp" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="images/hotels/pngs/komune-living-mobile.png">
+                      <source srcset="images/hotels/webp/komune-living.webp" type="image/webp">
+                      <img class="hotel-image" src="images/hotels/pngs/komune-living.png" alt="Komune Living" loading="lazy" decoding="async">
+                    </picture>
+                    <h4>Komune<br class="mobile-title-break"> Living</h4>
+                    <p class="hotel-distance">Walking distance</p>
+                    <p class="hotel-price">$$&ndash;$$$</p>
+                    <p class="hotel-description">Modern hotel and co-living property few minutes away from CCEC, with comfortable rooms, a rooftop pool, and co-working spaces.</p>
+                    <a class="hotel-more" href="https://bangsarsouth.komuneliving.com/" target="_blank" rel="noopener" aria-label="More info about Komune Living">More info</a>
+                  </article>
+
+                  <article class="hotel-card">
+                    <picture>
                       <source media="(max-width: 767px)" srcset="images/hotels/webp/st-giles-mobile.webp" type="image/webp">
                       <source media="(max-width: 767px)" srcset="images/hotels/pngs/st-giles-mobile.png">
                       <source srcset="images/hotels/webp/st-giles.webp" type="image/webp">
@@ -491,6 +508,20 @@
                     <p class="hotel-price">$$&ndash;$$$</p>
                     <p class="hotel-description">Modern 4-star, direct-access accommodation at Bangsar South&rsquo;s Connexion Event Centre with stylish rooms, dining, and pool.</p>
                     <a class="hotel-more" href="https://www.vehotel.com" target="_blank" rel="noopener" tabindex="-1">More info</a>
+                  </article>
+
+                  <article class="hotel-card">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="images/hotels/webp/komune-living-mobile.webp" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="images/hotels/pngs/komune-living-mobile.png">
+                      <source srcset="images/hotels/webp/komune-living.webp" type="image/webp">
+                      <img class="hotel-image" src="images/hotels/pngs/komune-living.png" alt="" loading="lazy" decoding="async">
+                    </picture>
+                    <h4>Komune<br class="mobile-title-break"> Living</h4>
+                    <p class="hotel-distance">Walking distance</p>
+                    <p class="hotel-price">$$&ndash;$$$</p>
+                    <p class="hotel-description">Modern hotel and co-living property few minutes away from CCEC, with comfortable rooms, a rooftop pool, and co-working spaces.</p>
+                    <a class="hotel-more" href="https://bangsarsouth.komuneliving.com/" target="_blank" rel="noopener" tabindex="-1">More info</a>
                   </article>
 
                   <article class="hotel-card">

@@ -789,6 +789,79 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   color: var(--color-orange-20);
 }
 
+.price-card-ended {
+  --ticket-background-color: #3b3d40;
+  --ticket-background-image: linear-gradient(rgba(42, 43, 45, 0.7), rgba(42, 43, 45, 0.7)), url("../images/ticket-early.png");
+  --ticket-logo: url("../images/guxs-logo-vert-grey.svg");
+  --ticket-logo-opacity: 0.54;
+  color: rgba(255, 255, 255, 0.74);
+  opacity: 0.78;
+  filter: grayscale(1) saturate(0) brightness(0.74);
+}
+
+.price-card-ended h2,
+.price-card-ended .price {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.price-card-ended .price {
+  position: relative;
+  width: fit-content;
+  margin-top: 34px;
+  text-decoration: none;
+}
+
+.price-card-ended .price::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -0.2em;
+  top: 55%;
+  height: 0.05em;
+  background: currentColor;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.price-card-ended h2 {
+  margin-bottom: 0;
+}
+
+.price-card-ended .card-subtitle,
+.price-card-ended li {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.price-card-orange.price-card-ended li::before {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.ended-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  min-height: 0;
+  margin: 0;
+  padding: 6px 12px 5px;
+  border-radius: 999px;
+  background: #2f3035;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--type-label-2-font-family);
+  font-size: calc(var(--ticket-subtitle-size) - 2px);
+  font-weight: 300;
+  line-height: var(--type-label-2-line-height);
+  letter-spacing: 0;
+}
+
+.ended-pill-dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
 .price-content {
   position: relative;
   z-index: 2;
@@ -1042,7 +1115,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
 .schedule-date .evening {
   grid-column: 2;
-  font-size: 24px;
 }
 
 .schedule-copy {
@@ -1801,7 +1873,7 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   --hotel-gap: 16px;
   --hotel-card-width: 305px;
   --hotel-peek: 0px;
-  --hotel-slide-distance: calc(var(--hotel-card-width) + var(--hotel-gap) + var(--hotel-card-width) + var(--hotel-gap));
+  --hotel-slide-distance: calc((var(--hotel-card-width) + var(--hotel-gap)) * 3);
   position: relative;
   left: 50%;
   width: 100vw;
@@ -1864,6 +1936,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   font-weight: 300;
   line-height: 0.96;
   letter-spacing: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .mobile-title-break {
@@ -2475,6 +2549,11 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     line-height: 1.08;
   }
 
+  .mobile-title-break,
+  .ve-title-break {
+    display: none;
+  }
+
   .details-row .hotel-card p,
   .details-row .hotel-more {
     font-size: 14px;
@@ -2619,7 +2698,20 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
 @media (min-width: 768px) and (max-width: 1100px) {
   .hotel-card h4 {
+    font-size: 15px;
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hotel-card h4 {
+    font-size: clamp(13px, 1.25vw, 15px);
+    white-space: nowrap;
+  }
+
+  .mobile-title-break,
+  .ve-title-break {
+    display: none;
   }
 }
 
@@ -2627,6 +2719,14 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   .price-card {
     --ticket-feature-max: 146px;
     --ticket-logo-width: clamp(70px, 26%, 84px);
+  }
+
+  .price-card-ended .ended-pill {
+    margin-top: -6px;
+  }
+
+  .price-card-ended .price {
+    margin-top: 20px;
   }
 
   .price-card li:nth-child(n + 3) {
@@ -3510,6 +3610,18 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 @media (max-width: 767px) {
   .ve-title-break {
     display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hotel-card h4 {
+    font-size: clamp(13px, 1.25vw, 15px);
+    white-space: nowrap;
+  }
+
+  .mobile-title-break,
+  .ve-title-break {
+    display: none;
   }
 }
 
