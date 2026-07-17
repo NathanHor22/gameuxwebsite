@@ -687,8 +687,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  scroll-margin-top: 130px;
   margin-top: 108px;
+  scroll-margin-top: 130px;
 }
 
 .ticket-cta {
@@ -704,9 +704,11 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   --ticket-title-size: clamp(24px, 2.5vw, 30px);
   --ticket-subtitle-size: clamp(16px, 1.5vw, 18px);
   --ticket-price-size: clamp(44px, 4.7vw, 56px);
-  --ticket-feature-size: clamp(18px, 1.4vw, 20px);
-  --ticket-feature-gap: clamp(28px, 3vw, 42px);
+  --ticket-feature-size: 20px;
+  --ticket-feature-gap: clamp(22px, 2vw, 28px);
   --ticket-feature-max: 240px;
+  --ticket-pointer-size: 0.75em;
+  --ticket-pointer-gap: 14px;
   --ticket-logo-width: clamp(100px, 33%, 132px);
   --ticket-logo-right: -1px;
   --ticket-logo-bottom: -1px;
@@ -925,7 +927,17 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
 .price-card li {
   position: relative;
-  padding-left: 34px;
+  min-width: 0;
+  padding-left: calc(var(--ticket-pointer-size) + var(--ticket-pointer-gap));
+}
+
+.price-card li.ticket-benefit-hotel.ticket-benefit-hotel {
+  max-width: 220px;
+  white-space: normal;
+}
+
+.ticket-benefit-copy--two {
+  display: none;
 }
 
 @media (min-width: 1280px) {
@@ -946,7 +958,7 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     --ticket-subtitle-size: 20px;
     --ticket-price-size: 58px;
     --ticket-feature-size: 20px;
-    --ticket-feature-gap: 36px;
+    --ticket-feature-gap: 24px;
     --ticket-feature-max: 170px;
     --ticket-logo-width: clamp(92px, 29%, 112px);
   }
@@ -954,8 +966,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
 .price-card li::before,
 .bullet-arrow {
-  width: 16px;
-  height: 16px;
   clip-path: polygon(0 0, 64% 0, 100% 50%, 64% 100%, 0 100%);
 }
 
@@ -963,8 +973,15 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   content: "";
   position: absolute;
   left: 0;
-  top: 5px;
+  top: calc((1.1em - var(--ticket-pointer-size)) / 2);
+  width: var(--ticket-pointer-size);
+  height: var(--ticket-pointer-size);
   background: currentColor;
+}
+
+.bullet-arrow {
+  width: 16px;
+  height: 16px;
 }
 
 .price-card-orange li::before {
@@ -2315,8 +2332,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
   .ticket-grid {
     gap: 12px;
-    scroll-margin-top: 120px;
     margin-top: 72px;
+    scroll-margin-top: 120px;
   }
 
   .ticket-cta {
@@ -2331,8 +2348,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     --ticket-subtitle-size: 16px;
     --ticket-price-size: 31px;
     --ticket-feature-size: 16px;
-    --ticket-feature-gap: 20px;
-    --ticket-feature-max: 132px;
+    --ticket-feature-gap: 16px;
+    --ticket-feature-max: 156px;
     --ticket-logo-width: clamp(72px, 30%, 96px);
     --ticket-logo-right: -1px;
     --ticket-logo-bottom: -1px;
@@ -2350,15 +2367,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
   .price {
     margin: 34px 0 31px;
-  }
-
-  .price-card li {
-    padding-left: 40px;
-  }
-
-  .price-card li::before {
-    width: 9px;
-    height: 9px;
   }
 
   .bullet-arrow {
@@ -2749,8 +2757,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     --ticket-title-size: clamp(22px, 3vw, 24px);
     --ticket-subtitle-size: 16px;
     --ticket-price-size: clamp(40px, 5vw, 44px);
-    --ticket-feature-size: clamp(16px, 2.4vw, 18px);
-    --ticket-feature-gap: clamp(18px, 3vw, 24px);
+    --ticket-feature-size: 18px;
+    --ticket-feature-gap: 18px;
     --ticket-feature-max: min(210px, 58%);
     --ticket-logo-width: clamp(108px, 30%, 126px);
     --ticket-logo-right: -1px;
@@ -2764,15 +2772,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     margin: 35px 0 40px;
   }
 
-  .price-card li {
-    padding-left: 28px;
-  }
-
-  .price-card li::before {
-    top: 4px;
-    width: 14px;
-    height: 14px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -3055,8 +3054,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    scroll-margin-top: 112px;
     margin-top: 60px;
+    scroll-margin-top: 112px;
   }
 
   .ticket-cta {
@@ -3089,16 +3088,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     gap: 18px;
     max-width: 185px;
     font-size: 16px;
-  }
-
-  .price-card li {
-    padding-left: 28px;
-  }
-
-  .price-card li::before {
-    top: 2px;
-    width: 15px;
-    height: 15px;
   }
 
   .mark-bg {
@@ -3542,7 +3531,7 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     --ticket-subtitle-size: 16px;
     --ticket-price-size: 40px;
     --ticket-feature-size: 16px;
-    --ticket-feature-gap: 24px;
+    --ticket-feature-gap: 18px;
     --ticket-feature-max: min(300px, 100%);
     --ticket-logo-width: clamp(82px, 26%, 112px);
     --ticket-logo-right: -1px;
@@ -3586,20 +3575,29 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     background-size: contain;
   }
 
-  .price-card li {
-    padding-left: 26px;
-  }
-
-  .price-card li::before {
-    top: 3px;
-    width: 14px;
-    height: 14px;
-  }
 }
 
 @media (min-width: 375px) and (max-width: 640px) {
   .price-card li {
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .price-card ul {
+    max-width: 230px;
+  }
+
+  .price-card li.ticket-benefit-hotel.ticket-benefit-hotel {
+    max-width: 230px;
+  }
+
+  .ticket-benefit-copy--three {
+    display: none;
+  }
+
+  .ticket-benefit-copy--two {
+    display: inline;
   }
 }
 
