@@ -1264,6 +1264,15 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   width: max-content;
 }
 
+/* Prevent empty whitespace appearing when horizontally scrolling the speaker carousel */
+.speaker-track::after {
+  content: "";
+  display: block;
+  flex: 0 0 var(--speaker-inline-start);
+  width: var(--speaker-inline-start);
+  height: 1px;
+}
+
 .speaker-card-set {
   display: flex;
   flex: 0 0 auto;
