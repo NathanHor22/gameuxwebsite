@@ -1264,20 +1264,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   width: max-content;
 }
 
-/* Prevent empty whitespace appearing when horizontally scrolling the speaker carousel */
-.speaker-track::after {
-  content: "";
-  display: block;
-  flex: 0 0 var(--speaker-inline-start);
-  width: var(--speaker-inline-start);
-  height: 1px;
-}
-
-/* Ensure track fills carousel padding so no blank area appears at end */
-.speaker-track {
-  padding-right: var(--speaker-inline-start);
-}
-
 .speaker-card-set {
   display: flex;
   flex: 0 0 auto;
@@ -1920,11 +1906,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   transform: translate3d(0, 0, 0);
   transition: transform 720ms cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
-}
-
-/* Make hotel track include carousel inline padding to avoid end-gap */
-.hotel-track {
-  padding-right: var(--hotel-inline-start);
 }
 
 .hotel-carousel[data-hotel-page="1"] .hotel-track {
@@ -2762,6 +2743,10 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 }
 
 @media (max-width: 900px) {
+  .speaker-role-desktop-break {
+    display: none;
+  }
+
   .ticket-grid {
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
