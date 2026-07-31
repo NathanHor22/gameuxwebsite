@@ -1213,18 +1213,17 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 }
 
 .speaker-carousel {
-  --speaker-inline-start: max(80px, calc((100vw - 1280px) / 2));
+  /* Matches .page-wrap's gutter: 100% here is the section width (scrollbar
+     excluded), unlike 100vw, so the first card lines up with the heading. */
+  --speaker-inline-start: max(80px, calc((100% - 1280px) / 2));
   --speaker-gap: 16px;
   --speaker-card-width: 305px;
   --speaker-slide-distance: calc((var(--speaker-card-width) + var(--speaker-gap)) * 3);
   position: relative;
-  left: 50%;
-  grid-column: 1 / -1;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  margin-left: -50vw;
   padding-left: var(--speaker-inline-start);
-  padding-right: var(--speaker-inline-start);
+  padding-right: 0;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
@@ -2937,12 +2936,10 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   }
 
   .speaker-carousel {
-    left: auto;
-    order: 2;
     width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
+    /* Sits outside .page-wrap, so it carries the page gutter itself. */
+    padding-left: var(--speaker-inline-start);
+    padding-right: var(--speaker-inline-start);
     overflow: visible;
   }
 
@@ -3209,6 +3206,11 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
   .speaker-list-section .section-heading {
     margin-bottom: 25px;
+  }
+
+  .speaker-carousel {
+    /* Tracks .page-wrap's calc(100% - 32px) at this breakpoint. */
+    --speaker-inline-start: 16px;
   }
 
   .speaker-card-set {
