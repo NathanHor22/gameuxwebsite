@@ -81,50 +81,71 @@ function setupHotelSlider(slider) {
 }
 
 function setupSpeakerSlider(slider) {
-  const track = slider.querySelector("[data-speaker-track]");
-  const buttons = Array.from(slider.querySelectorAll("[data-speaker-page-button]"));
-  const cards = Array.from(slider.querySelectorAll(".speaker-card-set:not(.speaker-card-set--clone) .speaker-card"));
-  if (!track || !cards.length) return;
+  const pagination = slider.parentElement?.querySelector("[data-speaker-pagination]");
+  if (!pagination) return;
 
-  function setPage(page) {
-    const nextPage = page === 1 ? 1 : 0;
-    slider.dataset.speakerPage = String(nextPage);
-    buttons.forEach((button) => {
-      const isActive = button.getAttribute("data-speaker-page-button") === String(nextPage);
+  let buttons = [];
+  let pageCount = 0;
+  let frame = 0;
+
+  function getMaxScroll() {
+    return Math.max(0, slider.scrollWidth - slider.clientWidth);
+  }
+
+  function getActivePage() {
+    const maxScroll = getMaxScroll();
+    if (!maxScroll || pageCount < 2) return 0;
+    return Math.round((slider.scrollLeft / maxScroll) * (pageCount - 1));
+  }
+
+  function updateActivePage() {
+    const activePage = getActivePage();
+    buttons.forEach((button, index) => {
+      const isActive = index === activePage;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-current", String(isActive));
     });
   }
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setPage(Number(button.getAttribute("data-speaker-page-button")));
-    });
-  });
+  function scrollToPage(page) {
+    const maxScroll = getMaxScroll();
+    const left = pageCount > 1 ? (maxScroll * page) / (pageCount - 1) : 0;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    slider.scrollTo({ left, behavior: reduceMotion ? "auto" : "smooth" });
+  }
 
-  track.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof Element) || target.closest("a, button")) return;
-
-    const card = target.closest(".speaker-card");
-    if (!card || !cards.includes(card)) return;
-
-    const sliderRect = slider.getBoundingClientRect();
-    const cardRect = card.getBoundingClientRect();
-    const currentPage = slider.dataset.speakerPage === "1" ? 1 : 0;
-    const clickX = event.clientX;
-    const sliderMidpoint = sliderRect.left + sliderRect.width / 2;
-
-    if (currentPage === 0 && (cardRect.right > sliderRect.right + 1 || clickX > sliderMidpoint)) {
-      setPage(1);
+  function renderPagination() {
+    const nextPageCount = Math.max(1, Math.ceil(slider.scrollWidth / slider.clientWidth));
+    if (nextPageCount !== pageCount) {
+      pageCount = nextPageCount;
+      pagination.replaceChildren();
+      buttons = Array.from({ length: pageCount }, (_, index) => {
+        const button = document.createElement("button");
+        button.className = "speaker-dot";
+        button.type = "button";
+        button.setAttribute("aria-label", `Show speaker group ${index + 1} of ${pageCount}`);
+        button.addEventListener("click", () => scrollToPage(index));
+        pagination.append(button);
+        return button;
+      });
     }
 
-    if (currentPage === 1 && (cardRect.left < sliderRect.left - 1 || clickX < sliderMidpoint)) {
-      setPage(0);
-    }
-  });
+    pagination.hidden = pageCount < 2;
+    updateActivePage();
+  }
 
-  setPage(Number(slider.dataset.speakerPage));
+  slider.addEventListener("scroll", () => {
+    window.cancelAnimationFrame(frame);
+    frame = window.requestAnimationFrame(updateActivePage);
+  }, { passive: true });
+
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(renderPagination).observe(slider);
+  } else {
+    window.addEventListener("resize", renderPagination);
+  }
+
+  renderPagination();
 }
 
 function setupDragScroll(scroller) {

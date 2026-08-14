@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="images/hero-title-desktop.svg?v=20260624-1" type="image/svg+xml" media="(min-width: 768px)">
   <link rel="preload" as="image" href="images/hero-title-mobile.svg?v=20260624-1" type="image/svg+xml" media="(max-width: 767px)">
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..400&family=JetBrains+Mono:wght@300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=speaker-luis-role-break-1">
+  <link rel="stylesheet" href="css/style.css?v=speaker-scroll-indicator-2">
 </head>
 <body>
   <header class="topbar nav-glass">
@@ -227,7 +227,7 @@
       <div class="page-wrap speaker-list-layout">
         <h2 class="section-heading" id="speaker-list-title">Meet the<br>Speakers</h2>
 
-        <div class="speaker-carousel" aria-label="Speaker list" data-speaker-page="0" data-drag-scroll>
+        <div class="speaker-carousel" aria-label="Speaker list" data-speaker-slider data-drag-scroll>
           <div class="speaker-track" data-speaker-track>
             <div class="speaker-card-set">
               <article class="speaker-card">
@@ -316,34 +316,6 @@
 
               <article class="speaker-card">
                 <div class="speaker-media">
-                  <img src="images/speakers/chloe-hodgson-2026.png" alt="Chloe Hodgson">
-                </div>
-                <div class="speaker-info">
-                  <div>
-                    <h3>Chloe Hodgson</h3>
-                    <p>UX Designer</p>
-                    <p class="speaker-company">Freelance</p>
-                  </div>
-                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
-                </div>
-              </article>
-
-              <article class="speaker-card">
-                <div class="speaker-media">
-                  <img src="images/speakers/jozef-kulik-speaker-list-2026.png" alt="Józef Kulik">
-                </div>
-                <div class="speaker-info">
-                  <div>
-                    <h3>Józef Kulik</h3>
-                    <p>Senior Researcher and<br>Accessibility Lead</p>
-                    <p class="speaker-company">PlaytestCloud</p>
-                  </div>
-                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
-                </div>
-              </article>
-
-              <article class="speaker-card">
-                <div class="speaker-media">
                   <img src="images/speakers/abhishek-agarwal-2026.png" alt="Abhishek Agarwal">
                 </div>
                 <div class="speaker-info">
@@ -364,6 +336,34 @@
                   <div>
                     <h3>Lydia Ho Lee Wei</h3>
                     <p>Game and Narrative Designer</p>
+                  </div>
+                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+                </div>
+              </article>
+
+              <article class="speaker-card">
+                <div class="speaker-media">
+                  <img src="images/speakers/jozef-kulik-speaker-list-2026.png" alt="Józef Kulik">
+                </div>
+                <div class="speaker-info">
+                  <div>
+                    <h3>Józef Kulik</h3>
+                    <p>Senior Research and<br>Accessibility Lead</p>
+                    <p class="speaker-company">PlaytestCloud</p>
+                  </div>
+                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+                </div>
+              </article>
+
+              <article class="speaker-card">
+                <div class="speaker-media">
+                  <img src="images/speakers/chloe-hodgson-2026.png" alt="Chloe Hodgson">
+                </div>
+                <div class="speaker-info">
+                  <div>
+                    <h3>Chloe Hodgson</h3>
+                    <p>UX Designer</p>
+                    <p class="speaker-company">Freelance</p>
                   </div>
                   <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
                 </div>
@@ -523,6 +523,34 @@
                 </div>
               </article>
 
+              <article class="speaker-card">
+                <div class="speaker-media">
+                  <img src="images/speakers/xingyu-zhang-2026.png" alt="Xingyu Zhang">
+                </div>
+                <div class="speaker-info">
+                  <div>
+                    <h3>Xingyu Zhang</h3>
+                    <p>Game UX Researcher</p>
+                    <p class="speaker-company">Tencent</p>
+                  </div>
+                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+                </div>
+              </article>
+
+              <article class="speaker-card">
+                <div class="speaker-media">
+                  <img src="images/speakers/fan-yi-2026.png" alt="Fan Yi">
+                </div>
+                <div class="speaker-info">
+                  <div>
+                    <h3>Fan Yi</h3>
+                    <p>Game UX Researcher</p>
+                    <p class="speaker-company">Tencent</p>
+                  </div>
+                  <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+                </div>
+              </article>
+
               <article class="speaker-card speaker-card--announcement">
                 <div class="speaker-media">
                   <img src="images/speakers/more-speakers-2026-v2.png" alt="More speakers will be announced soon">
@@ -531,6 +559,7 @@
             </div>
           </div>
         </div>
+        <div class="speaker-pagination" data-speaker-pagination aria-label="Speaker groups"></div>
       </div>
     </section>
 
@@ -862,6 +891,6 @@
     </section>
   </main>
 
-  <script src="js/main.js?v=js-drag-scroll-4" defer></script>
+  <script src="js/main.js?v=js-speaker-indicator-1" defer></script>
 </body>
 </html>
