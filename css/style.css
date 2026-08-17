@@ -1271,10 +1271,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   margin-top: 36px;
 }
 
-.speaker-pagination[hidden] {
-  display: none;
-}
-
 .speaker-dot {
   display: block;
   width: 28px;
@@ -2963,6 +2959,10 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     font-size: 14px;
   }
 
+  .speaker-list-section {
+    overflow: visible;
+  }
+
   .speaker-list-layout {
     display: flex;
     flex-direction: column;
@@ -2973,35 +2973,35 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   }
 
   .speaker-carousel {
-    --speaker-gap: 12px;
-    --speaker-cards-visible: 3.2;
-    --speaker-card-width: calc(
-      (100vw - (var(--speaker-inline-start) * 2) - ((var(--speaker-cards-visible) - 1) * var(--speaker-gap)))
-      / var(--speaker-cards-visible)
-    );
+    left: auto;
     order: 2;
-    scroll-snap-type: x proximity;
-    scroll-padding-left: var(--speaker-inline-start);
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+  }
+
+  .speaker-carousel .speaker-track {
+    display: block;
+    width: auto;
+    transform: none;
   }
 
   .speaker-pagination {
-    order: 3;
-    flex-wrap: wrap;
-    gap: 6px 8px;
-    margin-top: 24px;
-  }
-
-  .speaker-dot {
-    width: 20px;
-    height: 4px;
+    display: none;
   }
 
   .speaker-card-set {
-    gap: var(--speaker-gap);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 38px var(--speaker-gap);
   }
 
   .speaker-card {
-    scroll-snap-align: start;
+    flex: none;
+    height: 100%;
   }
 
   .speaker-info {
@@ -3029,7 +3029,6 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     width: 14px;
     height: 14px;
     margin-top: 7px;
-    transform: none;
   }
 }
 
@@ -3252,10 +3251,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
     margin-bottom: 25px;
   }
 
-  .speaker-carousel {
-    --speaker-inline-start: 16px;
-    --speaker-gap: 12px;
-    --speaker-cards-visible: 2.2;
+  .speaker-card-set {
+    gap: 30px 12px;
   }
 
   .speaker-info {
