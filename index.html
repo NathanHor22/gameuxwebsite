@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="images/hero-title-desktop.svg?v=20260624-1" type="image/svg+xml" media="(min-width: 768px)">
   <link rel="preload" as="image" href="images/hero-title-mobile.svg?v=20260624-1" type="image/svg+xml" media="(max-width: 767px)">
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..400&family=JetBrains+Mono:wght@300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=speaker-scroll-indicator-2">
+  <link rel="stylesheet" href="css/style.css?v=schedule-day-links-2">
 </head>
 <body>
   <header class="topbar nav-glass">
@@ -26,9 +26,10 @@
 
     <nav class="main-nav label-1" aria-label="Main navigation" data-nav>
       <a href="#home">Home</a>
-      <a href="#meet-speakers">Speakers</a>
-      <a href="#schedule">Schedule</a>
       <a href="#tickets">Ticket Pricing</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#meet-speakers">Speakers</a>
+      <a href="#masterclasses">Masterclass</a>
       <a href="venue.html">The Venue</a>
       <a href="https://docs.google.com/document/d/1-7y74X6447_YUxSULtUTXp0sF3fZIB0uYlkNgwn9JMs/edit?tab=t.0" target="_blank" rel="noopener">Code of Conduct</a>
     </nav>
@@ -180,6 +181,7 @@
               <div>
                 <h4>Summit talks</h4>
                 <p>Full day of professional talks and speaker sessions focused on game UX and related disciplines.</p>
+                <a class="schedule-day-link" href="program.html?day=oct-12" aria-label="View the October 12 program tentative">Program Tentative</a>
               </div>
               <div>
                 <h4>Networking Mixer</h4>
@@ -200,6 +202,7 @@
               <div>
                 <h4>Summit talks</h4>
                 <p>Full day of professional talks and speaker sessions focused on game UX and related disciplines.</p>
+                <a class="schedule-day-link" href="program.html?day=oct-13" aria-label="View the October 13 program tentative">Program Tentative</a>
               </div>
             </div>
           </article>
@@ -214,7 +217,7 @@
             </div>
             <div class="schedule-copy">
               <div>
-                <h4>Masterclasses <span class="masterclass-ticket-note">(tickets available soon)</span></h4>
+                <h4>Masterclasses</h4>
                 <p>A dedicated day of masterclasses, designed for deeper learning and more focused discussion. You can attend one of the masterclasses happening in parallel if you buy an additional Masterclass ticket. A Summit ticket is required (masterclasses have limited seats and are reserved for Summit attendees).</p>
               </div>
             </div>
@@ -223,8 +226,8 @@
       </div>
     </section>
 
-    <section class="speaker-list-section section-light" id="meet-speakers" aria-labelledby="speaker-list-title">
-      <div class="page-wrap speaker-list-layout">
+    <section class="speaker-list-section section-light" aria-labelledby="speaker-list-title">
+      <div class="page-wrap speaker-list-layout" id="meet-speakers">
         <h2 class="section-heading" id="speaker-list-title">Meet the<br>Speakers</h2>
 
         <div class="speaker-carousel" aria-label="Speaker list" data-speaker-slider data-drag-scroll>
@@ -560,6 +563,73 @@
           </div>
         </div>
         <div class="speaker-pagination" data-speaker-pagination aria-label="Speaker groups"></div>
+      </div>
+    </section>
+
+    <section class="masterclasses-section" id="masterclasses" aria-labelledby="masterclasses-title">
+      <div class="page-wrap">
+        <div class="masterclasses-header">
+          <div>
+            <p class="masterclasses-date">Oct 14</p>
+            <h2 id="masterclasses-title">Masterclasses</h2>
+            <p class="masterclasses-note">* Summit ticket required</p>
+          </div>
+
+          <a class="speaker-button masterclass-button" href="https://luma.com/3c4l7tek" target="_blank" rel="noopener">
+            <span>Get Masterclass Tickets</span>
+            <img class="cta-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+
+        <div class="masterclass-grid">
+          <a class="masterclass-card" href="masterclass-jozef-kulik.html" aria-label="View Józef Kulik's masterclass details">
+            <img class="masterclass-image" src="images/masterclasses/jozef-kulik-2026.png?v=official-1" alt="Józef Kulik" loading="lazy" decoding="async">
+            <div class="masterclass-card-body">
+              <div>
+                <h3>Game Accessibility Masterclass</h3>
+                <p class="masterclass-speakers">Józef Kulik</p>
+                <p class="masterclass-company">(PlaytestCloud)</p>
+              </div>
+              <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="masterclass-card" href="masterclass-celia-hodent.html" aria-label="View Celia Hodent's masterclass details">
+            <img class="masterclass-image" src="images/masterclasses/celia-hodent-2026.png?v=official-2" alt="Celia Hodent" loading="lazy" decoding="async">
+            <div class="masterclass-card-body">
+              <div>
+                <h3>Cognitive Science and<br>Game UX Strategy for<br>Video Game Development</h3>
+                <p class="masterclass-speakers">Celia Hodent, PhD</p>
+                <p class="masterclass-company">(Independent)</p>
+              </div>
+              <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="masterclass-card" href="masterclass-kate-edwards.html" aria-label="View Kate Edwards' masterclass details">
+            <img class="masterclass-image" src="images/masterclasses/kate-edwards-2026.png?v=official-2" alt="Kate Edwards" loading="lazy" decoding="async">
+            <div class="masterclass-card-body">
+              <div>
+                <h3>Expanding Your Game&rsquo;s Global<br>Reach through Culturalization</h3>
+                <p class="masterclass-speakers">Kate Edwards</p>
+                <p class="masterclass-company">(Geogrify / SetJetters)</p>
+              </div>
+              <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="masterclass-card" href="masterclass-sebastian-wang-laura-elek.html" aria-label="View Sebastian Wang and Laura Elek's masterclass details">
+            <img class="masterclass-image" src="images/masterclasses/sebastian-wang-laura-elek-2026.png?v=official-1" alt="Sebastian Wang and Laura Elek" loading="lazy" decoding="async">
+            <div class="masterclass-card-body">
+              <div>
+                <h3>Game UI/UX Design Fundamentals</h3>
+                <p class="masterclass-speakers">Sebastian Wang &amp; Laura Elek</p>
+                <p class="masterclass-company">(PlayStation Studios)</p>
+              </div>
+              <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
