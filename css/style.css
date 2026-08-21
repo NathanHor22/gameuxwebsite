@@ -1673,6 +1673,8 @@ a.masterclass-card:focus-visible {
 }
 
 .masterclass-detail-page {
+  overflow-x: clip;
+  overflow-y: visible;
   background: var(--color-black-100);
 }
 
@@ -4800,7 +4802,7 @@ a.masterclass-card:focus-visible {
 }
 
 .program-row {
-  --program-divider-inset: 24px;
+  --program-divider-inset: 0px;
   position: relative;
   display: grid;
   grid-template-columns: minmax(210px, 38%) minmax(0, 1fr);
@@ -4932,7 +4934,7 @@ a.masterclass-card:focus-visible {
   }
 
   .program-row {
-    --program-divider-inset: 16px;
+    --program-divider-inset: 0px;
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
     min-height: 0;
