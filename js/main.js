@@ -218,6 +218,39 @@ function setupDragScroll(scroller) {
   });
 }
 
+function getSpeakerPageSlug(name) {
+  return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function setupSpeakerCardLink(card) {
+  const heading = card.querySelector("h2, h3");
+  if (!heading) return;
+
+  const speakerName = heading.textContent.trim();
+  const href = `speaker-${getSpeakerPageSlug(speakerName)}.html`;
+
+  card.setAttribute("role", "link");
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("aria-label", `View ${speakerName}'s speaker page`);
+
+  card.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("a, button")) return;
+    window.location.href = href;
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    window.location.href = href;
+  });
+}
+
 if (nav && menuToggle) {
   setupMenu(nav, menuToggle);
 }
@@ -225,3 +258,4 @@ if (nav && menuToggle) {
 hotelSliders.forEach(setupHotelSlider);
 speakerSliders.forEach(setupSpeakerSlider);
 dragScrollAreas.forEach(setupDragScroll);
+document.querySelectorAll(".speaker-card").forEach(setupSpeakerCardLink);

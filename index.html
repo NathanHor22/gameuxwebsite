@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href="images/hero-title-desktop.svg?v=20260624-1" type="image/svg+xml" media="(min-width: 768px)">
   <link rel="preload" as="image" href="images/hero-title-mobile.svg?v=20260624-1" type="image/svg+xml" media="(max-width: 767px)">
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..400&family=JetBrains+Mono:wght@300..400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=schedule-day-links-2">
+  <link rel="stylesheet" href="css/style.css?v=speaker-profiles-1">
 </head>
 <body>
   <header class="topbar nav-glass">
@@ -27,11 +27,12 @@
     <nav class="main-nav label-1" aria-label="Main navigation" data-nav>
       <a href="#home">Home</a>
       <a href="#tickets">Ticket Pricing</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#meet-speakers">Speakers</a>
+      <a href="program.html">Schedule</a>
+      <a href="#keynote">Keynote</a>
+      <a href="speakers.html">Speakers</a>
       <a href="#masterclasses">Masterclass</a>
       <a href="venue.html">The Venue</a>
-      <a href="https://docs.google.com/document/d/1-7y74X6447_YUxSULtUTXp0sF3fZIB0uYlkNgwn9JMs/edit?tab=t.0" target="_blank" rel="noopener">Code of Conduct</a>
+      <a class="nav-code-of-conduct" href="https://docs.google.com/document/d/1-7y74X6447_YUxSULtUTXp0sF3fZIB0uYlkNgwn9JMs/edit?tab=t.0" target="_blank" rel="noopener">Code of Conduct</a>
     </nav>
 
     <p class="event-date label-1">
@@ -60,7 +61,7 @@
             <p class="hero-partner-label">Hosted by</p>
             <div class="hero-partner-logos hero-hosted-logos">
               <img class="hero-ps-creative" src="images/ps-creative-white-full.svg" width="198" height="66" alt="PlayStation Studios Creative">
-              <img class="hero-levelup" src="images/levelup-kl-white.svg" width="72" height="64" alt="Level Up KL">
+              <img class="hero-mdec" src="images/mdec-white.svg" width="130" height="24" alt="Malaysia Digital Economy Corporation (MDEC)">
             </div>
           </div>
           <div class="hero-partner-group hero-partner-sponsored">
@@ -74,7 +75,15 @@
     <section class="about section-light">
       <div class="page-wrap intro-grid">
         <h1 class="section-heading">About<br>the Event</h1>
-        <p class="intro-copy">The Game UX Summit is a professional event dedicated to advancing User Experience in the video game industry. Celebrating its 10th anniversary, this in-person summit will take place in Kuala Lumpur, Malaysia on October 12th-14th 2026.</p>
+        <div class="intro-content">
+          <p class="intro-copy">The Game UX Summit is a professional event dedicated to advancing User Experience in the video game industry. Celebrating its 10th anniversary, this in-person summit will take place in Kuala Lumpur, Malaysia on October 12th-14th 2026.</p>
+          <!-- Attendee Guidebook CTA hidden until the guide is ready.
+          <span class="ticket-button label-1 attendee-guidebook-button" aria-disabled="true">
+            <span>Attendee Guidebook</span>
+            <img class="cta-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+          </span>
+          -->
+        </div>
       </div>
 
       <div class="past-carousel" role="region" aria-label="Past Game UX Summit event photos" tabindex="0">
@@ -181,7 +190,7 @@
               <div>
                 <h4>Summit talks</h4>
                 <p>Full day of professional talks and speaker sessions focused on game UX and related disciplines.</p>
-                <a class="schedule-day-link" href="program.html?day=oct-12" aria-label="View the October 12 program tentative">Program Tentative</a>
+                <a class="schedule-day-link" href="program.html?day=oct-12" aria-label="View the October 12 program">Program</a>
               </div>
               <div>
                 <h4>Networking Mixer</h4>
@@ -202,7 +211,7 @@
               <div>
                 <h4>Summit talks</h4>
                 <p>Full day of professional talks and speaker sessions focused on game UX and related disciplines.</p>
-                <a class="schedule-day-link" href="program.html?day=oct-13" aria-label="View the October 13 program tentative">Program Tentative</a>
+                <a class="schedule-day-link" href="program.html?day=oct-13" aria-label="View the October 13 program">Program</a>
               </div>
             </div>
           </article>
@@ -226,9 +235,53 @@
       </div>
     </section>
 
+    <section class="keynote-section" id="keynote" aria-labelledby="keynote-title">
+      <div class="page-wrap">
+        <h2 class="section-heading" id="keynote-title">Keynote</h2>
+
+        <div class="keynote-grid">
+          <a class="keynote-card" href="keynote-shafiq-husein.html" aria-label="View Shafiq Husein's keynote profile">
+            <img class="keynote-portrait" src="images/keynote-shafiq-husein-2026.png" alt="Shafiq Husein">
+            <div class="keynote-content">
+              <h3>Shafiq Husein <span class="keynote-pronouns">(he/him)</span></h3>
+              <p class="keynote-role">CEO of Gambir Studio &amp; President</p>
+              <p class="keynote-company">Asosiasi Game Indonesia (AGI)</p>
+              <span class="keynote-more"><span>More info</span><span class="keynote-more-arrow" aria-hidden="true"></span></span>
+            </div>
+          </a>
+
+          <a class="keynote-card" href="keynote-evva-karr.html" aria-label="View Evva Karr's keynote profile">
+            <img class="keynote-portrait" src="images/keynote-evva-karr-2026.png" alt="Evva Karr">
+            <div class="keynote-content">
+              <h3>Evva Karr <span class="keynote-pronouns">(they/them)</span></h3>
+              <p class="keynote-role">CEO &amp; Founder</p>
+              <p class="keynote-company">Glitch</p>
+              <span class="keynote-more"><span>More info</span><span class="keynote-more-arrow" aria-hidden="true"></span></span>
+            </div>
+          </a>
+
+          <a class="keynote-card" href="keynote-fred-markus.html" aria-label="View Frederic Markus's keynote profile">
+            <img class="keynote-portrait" src="images/keynote-fred-markus-2026.png" alt="Frederic Markus">
+            <div class="keynote-content">
+              <h3>Frederic Markus <span class="keynote-pronouns">(he/him)</span></h3>
+              <p class="keynote-role">President</p>
+              <p class="keynote-company">Feerik Games</p>
+              <span class="keynote-more"><span>More info</span><span class="keynote-more-arrow" aria-hidden="true"></span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="speaker-list-section section-light" aria-labelledby="speaker-list-title">
       <div class="page-wrap speaker-list-layout" id="meet-speakers">
-        <h2 class="section-heading" id="speaker-list-title">Meet the<br>Speakers</h2>
+        <div class="speaker-list-header">
+          <h2 class="section-heading" id="speaker-list-title">Speakers</h2>
+          <a class="speaker-button speaker-list-cta" href="speakers.html">
+            <span>View All Speakers</span>
+            <img class="cta-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
 
         <div class="speaker-carousel" aria-label="Speaker list" data-speaker-slider data-drag-scroll>
           <div class="speaker-track" data-speaker-track>
@@ -240,6 +293,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Noor Amin</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Senior Game Designer</p>
                     <p class="speaker-company">Riot Games</p>
                   </div>
@@ -254,6 +308,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Png Yi Wei</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Founder and<span class="speaker-role-desktop-space"> </span><br class="speaker-role-mobile-break">Director</p>
                     <p class="speaker-company">Kurechii</p>
                   </div>
@@ -268,6 +323,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Jami Lukins</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>UX Director</p>
                     <p class="speaker-company">Blizzard</p>
                   </div>
@@ -282,6 +338,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Laura Elek</h3>
+                    <p class="speaker-pronouns">(she/they)</p>
                     <p>Senior UX/UI Designer</p>
                     <p class="speaker-company">PlayStation Studios</p>
                   </div>
@@ -296,8 +353,9 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Kate Fomina</h3>
-                    <p>Senior UX/UI Designer</p>
-                    <p class="speaker-company">Gravity Well</p>
+                    <p class="speaker-pronouns">(she/her)</p>
+                    <p>UIUX Creative Director</p>
+                    <p class="speaker-company">UX is Fine</p>
                   </div>
                   <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
                 </div>
@@ -310,6 +368,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Dr Ng Yiing Y'ng</h3>
+                    <p class="speaker-pronouns">(she)</p>
                     <p>Senior Lecturer</p>
                     <p class="speaker-company">UOW Malaysia</p>
                   </div>
@@ -324,6 +383,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Abhishek Agarwal</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Principal UX Designer</p>
                     <p class="speaker-company">Ubisoft</p>
                   </div>
@@ -338,6 +398,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Lydia Ho Lee Wei</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Game and Narrative Designer</p>
                   </div>
                   <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
@@ -351,6 +412,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Józef Kulik</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Senior Research and<br>Accessibility Lead</p>
                     <p class="speaker-company">PlaytestCloud</p>
                   </div>
@@ -365,6 +427,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Chloe Hodgson</h3>
+                    <p class="speaker-pronouns">(she/he)</p>
                     <p>UX Designer</p>
                     <p class="speaker-company">Freelance</p>
                   </div>
@@ -379,6 +442,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Kate Edwards</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>CEO / CXO &amp; Cofounder</p>
                     <p class="speaker-company">Geogrify / SetJetters</p>
                   </div>
@@ -393,6 +457,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Foo Yi Chyuan</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Digital Media Design<br>Lecturer</p>
                     <p class="speaker-company">The One Academy</p>
                   </div>
@@ -407,6 +472,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Aurelie Bosc</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Associate Producer</p>
                     <p class="speaker-company">Ubisoft</p>
                   </div>
@@ -421,6 +487,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Thomas Bodin</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Senior UX Designer</p>
                     <p class="speaker-company">Ubisoft</p>
                   </div>
@@ -435,6 +502,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Luis Duarte</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Principal User<br class="speaker-role-desktop-break"> Researcher</p>
                     <p class="speaker-company">PlayStation Studios</p>
                   </div>
@@ -449,6 +517,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Michelle Choi</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Principal UI/UX Artist</p>
                     <p class="speaker-company">PlayStation Studios</p>
                   </div>
@@ -463,6 +532,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Fabiana Mascolo</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Senior UI/UX Designer</p>
                     <p class="speaker-company">Fenris Creations (CCP Games)</p>
                   </div>
@@ -477,6 +547,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Charlotte Couderc</h3>
+                    <p class="speaker-pronouns">(she)</p>
                     <p>Senior UI Artist</p>
                     <p class="speaker-company">CD Projekt Red</p>
                   </div>
@@ -491,7 +562,8 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Greg Haynes</h3>
-                    <p>Senior Accessibility Researcher</p>
+                    <p class="speaker-pronouns">(he/him)</p>
+                    <p>Principal UI/UX Artist</p>
                     <p class="speaker-company">PlayStation Studios</p>
                   </div>
                   <img class="speaker-card-arrow" src="images/arrow-up.svg" alt="" aria-hidden="true">
@@ -505,6 +577,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Stefan Marcus Baier</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Co-Founder,<br> Director of Development</p>
                     <p class="speaker-company">Streamline Studios</p>
                   </div>
@@ -519,6 +592,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Andrew James</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Publishing &amp; Release Manager</p>
                     <p class="speaker-company">Streamline Studios</p>
                   </div>
@@ -533,6 +607,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Xingyu Zhang</h3>
+                    <p class="speaker-pronouns">(he/him)</p>
                     <p>Game UX Researcher</p>
                     <p class="speaker-company">Tencent</p>
                   </div>
@@ -547,6 +622,7 @@
                 <div class="speaker-info">
                   <div>
                     <h3>Fan Yi</h3>
+                    <p class="speaker-pronouns">(she/her)</p>
                     <p>Game UX Researcher</p>
                     <p class="speaker-company">Tencent</p>
                   </div>
@@ -554,11 +630,6 @@
                 </div>
               </article>
 
-              <article class="speaker-card speaker-card--announcement">
-                <div class="speaker-media">
-                  <img src="images/speakers/more-speakers-2026-v2.png" alt="More speakers will be announced soon">
-                </div>
-              </article>
             </div>
           </div>
         </div>
@@ -587,8 +658,8 @@
             <div class="masterclass-card-body">
               <div>
                 <h3>Game Accessibility Masterclass</h3>
-                <p class="masterclass-speakers">Józef Kulik</p>
-                <p class="masterclass-company">(PlaytestCloud)</p>
+                <p class="masterclass-speakers">Józef Kulik (he/him)</p>
+                <p class="masterclass-company">— PlaytestCloud</p>
               </div>
               <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
             </div>
@@ -598,9 +669,9 @@
             <img class="masterclass-image" src="images/masterclasses/celia-hodent-2026.png?v=official-2" alt="Celia Hodent" loading="lazy" decoding="async">
             <div class="masterclass-card-body">
               <div>
-                <h3>Cognitive Science and<br>Game UX Strategy for<br>Video Game Development</h3>
-                <p class="masterclass-speakers">Celia Hodent, PhD</p>
-                <p class="masterclass-company">(Independent)</p>
+                <h3>Cognitive Science and <span class="masterclass-mobile-keep-together">Game UX<br class="masterclass-desktop-break"> Strategy</span><br class="masterclass-mobile-break"> for <span class="masterclass-keep-together">Video Game</span> Development</h3>
+                <p class="masterclass-speakers">Celia Hodent, PhD (she/her)</p>
+                <p class="masterclass-company">— Independent</p>
               </div>
               <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
             </div>
@@ -610,9 +681,9 @@
             <img class="masterclass-image" src="images/masterclasses/kate-edwards-2026.png?v=official-2" alt="Kate Edwards" loading="lazy" decoding="async">
             <div class="masterclass-card-body">
               <div>
-                <h3>Expanding Your Game&rsquo;s Global<br>Reach through Culturalization</h3>
-                <p class="masterclass-speakers">Kate Edwards</p>
-                <p class="masterclass-company">(Geogrify / SetJetters)</p>
+                <h3 class="masterclass-title-kate">Expanding Your Game&rsquo;s Global<br class="masterclass-desktop-break"> Reach through Culturalization</h3>
+                <p class="masterclass-speakers">Kate Edwards (she/her)</p>
+                <p class="masterclass-company">— Geogrify / SetJetters</p>
               </div>
               <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
             </div>
@@ -623,8 +694,8 @@
             <div class="masterclass-card-body">
               <div>
                 <h3>Game UI/UX Design Fundamentals</h3>
-                <p class="masterclass-speakers">Sebastian Wang &amp; Laura Elek</p>
-                <p class="masterclass-company">(PlayStation Studios)</p>
+                <p class="masterclass-speakers"><span class="masterclass-keep-together">Sebastian Wang (she/her)</span> &amp; <span class="masterclass-keep-together">Laura Elek</span> (she/they)</p>
+                <p class="masterclass-company">— PlayStation Studios</p>
               </div>
               <span class="masterclass-more" aria-hidden="true"><span>More info</span><span class="masterclass-more-arrow"></span></span>
             </div>
@@ -648,13 +719,14 @@
           </article>
 
           <article class="organiser-card">
-            <div class="organiser-media organiser-media--logo organiser-media--levelup-logo">
-              <img src="images/levelup-black-full.svg" alt="LEVEL UP KL">
+            <div class="organiser-media organiser-media--logo organiser-media--mdec-logo">
+              <img src="images/mdec-white.svg" alt="Malaysia Digital Economy Corporation (MDEC)">
             </div>
-            <h3>Host</h3>
-            <p class="body">LEVEL UP KL is a premier Southeast Asia Game Developers Conference, organised by Malaysia Digital Economy Corporation (MDEC).</p>
-            <p class="body">Over the past decade, LEVEL UP KL has grown into a flagship event for game developers across Southeast Asia to interact, learn and share knowledge—offering business and technical insights, as well as future-shaping trends from thought-leader keynotes and high-level panels from all over the world.</p>
-            <p class="body"><a class="organiser-website" href="https://www.mdec.my/levelupkl" target="_blank" rel="noopener">https://www.mdec.my/levelupkl</a></p>
+            <h3>Hosting and Platinum Partner</h3>
+            <p class="body">Malaysia Digital Economy Corporation (MDEC) is the national agency under the Ministry of Digital driving Malaysia&rsquo;s digital economy. Celebrating 30 years of accelerating digital transformation, MDEC leads the Malaysia Digital (MD) initiative, fuelling innovation, investment, and inclusive growth across the digital landscape. Guided by the pillars of digital rakyat, digital economy, and digital government, MDEC champions Malaysia&rsquo;s path to becoming an AI Nation by 2030 and partners globally to build a resilient, competitive digital ecosystem.</p>
+            <p class="body"><a class="organiser-website" href="https://www.mdec.my" target="_blank" rel="noopener">www.mdec.my</a></p>
+            <p class="body">LEVEL UP KL is a premier Southeast Asia Game Developers Conference, organised by MDEC. Over the past decade, LEVEL UP KL has grown into a flagship event for game developers across Southeast Asia to interact, learn and share knowledge—offering business and technical insights, as well as future-shaping trends from thought-leader keynotes and high-level panels from all over the world.</p>
+            <p class="body"><a class="organiser-website" href="https://www.mdec.my/levelupkl" target="_blank" rel="noopener">www.mdec.my/levelupkl</a></p>
           </article>
 
           <article class="organiser-card">
@@ -961,6 +1033,6 @@
     </section>
   </main>
 
-  <script src="js/main.js?v=js-speaker-indicator-1" defer></script>
+  <script src="js/main.js?v=js-speaker-profiles-1" defer></script>
 </body>
 </html>
