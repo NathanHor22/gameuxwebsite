@@ -444,8 +444,8 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
   z-index: 1;
   display: flex;
   align-items: flex-start;
-  gap: 80px;
-  width: min(676px, calc(100vw - 80px));
+  gap: 64px;
+  width: min(760px, calc(100vw - 80px));
   color: var(--color-white-100);
 }
 
@@ -486,6 +486,28 @@ body:not(.venue-page):has(#tickets:target) .main-nav a[href="#tickets"] {
 
 .hero-gamaste {
   width: 86px;
+  height: auto;
+}
+
+.hero-sponsored-logos {
+  display: grid;
+  grid-template-columns: 90px 140px;
+  gap: 20px 28px;
+  justify-items: center;
+}
+
+.hero-virtuos {
+  width: 140px;
+  height: auto;
+}
+
+.hero-ux-is-fine {
+  width: 62px;
+  height: auto;
+}
+
+.hero-apu {
+  width: 82px;
   height: auto;
 }
 
@@ -3719,11 +3741,11 @@ a.masterclass-card:focus-visible {
   }
 
   .hero-partners {
-    width: min(620px, calc(100vw - 80px));
-    gap: 64px;
+    width: min(760px, calc(100vw - 80px));
+    gap: 32px;
   }
 
-  .hero-partner-logos {
+  .hero-hosted-logos {
     gap: 44px;
   }
 
@@ -4224,14 +4246,16 @@ a.masterclass-card:focus-visible {
   .hero {
     --hero-nav-offset: 124px;
     --hero-height: 760px;
+    height: auto;
   }
 
   .hero-inner {
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 40px;
     min-height: 100%;
-    padding: var(--hero-nav-offset) 0 64px;
+    height: auto;
+    padding: var(--hero-nav-offset) 16px 64px;
   }
 
   .hero-bg {
@@ -4252,10 +4276,9 @@ a.masterclass-card:focus-visible {
 
   .hero-partners {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
     justify-items: center;
-    padding-left: 40px;
     width: min(340px, calc(100vw - 32px));
   }
 
@@ -4285,6 +4308,23 @@ a.masterclass-card:focus-visible {
 
   .hero-gamaste {
     width: clamp(45.9px, 12.75vw, 52.7px);
+  }
+
+  .hero-sponsored-logos {
+    grid-template-columns: 54px 94px 46px 58px;
+    gap: clamp(10px, 3vw, 20px);
+  }
+
+  .hero-virtuos {
+    width: 94px;
+  }
+
+  .hero-ux-is-fine {
+    width: 46px;
+  }
+
+  .hero-apu {
+    width: 58px;
   }
 
   .hero-logo-desktop {
